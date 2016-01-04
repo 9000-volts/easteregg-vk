@@ -1,3 +1,6 @@
+// EasterEgg-VK by 9000 volts (9kv.cu.cc)
+// Made for @ViktorKorolyuk on his site (http://viktorkorolyuk.cu.cc)
+// A fun little easter egg triggered who-knows-how!
 (function(){
   var running = false;
   
