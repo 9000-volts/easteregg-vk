@@ -11,7 +11,7 @@
       g_activate = function(e) {
         running = true;
         // Make everything position absolute.
-        var cn = document.body.childNodes;
+        var cn = document.body.children;
         for (var i = 0; i < cn.length; i++) {
           var p = cn[i].getBoundingClientRect();
           if (window.getComputedStyle(cn[i]).position !== "fixed")
