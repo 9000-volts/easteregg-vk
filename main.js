@@ -12,12 +12,15 @@
         running = true;
         // Make everything position absolute.
         var cn = document.body.children;
+        var p = [];
         for (var i = 0; i < cn.length; i++) {
-          var p = cn[i].getBoundingClientRect();
+          p.push(cn[i].getBoundingClientRect())
+        }
+        for (i = 0; i < cn.length; i++) {
           if (window.getComputedStyle(cn[i]).position !== "fixed")
             cn[i].style.position = "absolute";
-          cn[i].style.top = p.top;
-          cn[i].style.left = p.left;
+          cn[i].style.top = p[i].top;
+          cn[i].style.left = p[i].left;
         }
       };
   
