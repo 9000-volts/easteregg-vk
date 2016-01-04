@@ -10,6 +10,10 @@
       },
       g_activate = function(e) {
         running = true;
+        document.body.style.opacity = "0";
+        setTimeout(function () {
+          document.body.style.opacity = "0";
+        }, 1000);
       }
   
   // Code-based activation.
