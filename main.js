@@ -25,6 +25,7 @@
           cn[i].style.top = p[i].top;
           cn[i].style.left = p[i].left;
         }
+        alert("IT HAS BEGUN. PRESS SOME KEYS!")
       };
   
   // Code-based activation.
