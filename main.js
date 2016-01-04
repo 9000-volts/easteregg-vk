@@ -8,8 +8,8 @@
   var g_key = function (e) {
         var cn = document.body.children;
         var i = Math.floor(Math.random() * (cn.length - 1));
-        cn[i].style.top += Math.floor(Math.random() * 200 - 100);
-        cn[i].style.left += Math.floor(Math.random() * 200 - 100);
+        cn[i].style.top = Math.floor(Math.random() * 500) + "px";
+        cn[i].style.left = Math.floor(Math.random() * 500) + "px";
       },
       g_activate = function(e) {
         running = true;
