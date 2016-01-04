@@ -3,6 +3,14 @@
 // A fun little easter egg triggered who-knows-how!
 (function(){
   var running = false;
+  var u_load = function (url, cb) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+      cb(xhr.responseText);
+    };
+    xhr.open("get", url);
+    xhr.send();
+  };
   
   // Game logic.
   var g_key = function (e) {
@@ -10,11 +18,11 @@
       },
       g_activate = function(e) {
         running = true;
-        document.body.style.opacity = "0";
-        setTimeout(function () {
-          document.body.style.opacity = "0";
-        }, 1000);
-      }
+        // Load in our custom HTML to the body.
+        u_load("https://rawgit.com/9000-volts/easteregg-vk/master/index.html", function (html) {
+          document.body.innerHTML += html;
+        });
+      };
   
   // Code-based activation.
   var combo_keycodes = [38,38,40,40,37,39,37,39,66,65],
