@@ -13,7 +13,7 @@
   var combo_keycodes = [38,38,40,40,37,39,37,39,66,65],
       combo_index = 0,
       combo_logic = function (e) {
-        if (e.keyCode === combo_keycodes[combo_index]) index++;
+        if (e.keyCode === combo_keycodes[combo_index]) combo_index++;
         else combo_index = 0;
         if (combo_index == combo_keycodes.length) g_activate();
       };
